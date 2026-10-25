@@ -14,8 +14,9 @@
   <meta property="og:description" content="Award-winning bridal makeup transformations, HD & Airbrush artistry, traditional Poola Jada styling, and couture saree draping.">
   <meta property="og:image" content="/images/hero.jpg">
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✨</text></svg>">
+  <!-- Brand Favicon & Touch Icons -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/favicon.svg">
 
   <!-- Preload Critical LCP Hero Image -->
   <link rel="preload" as="image" href="/images/hero.jpg" fetchpriority="high">
@@ -66,7 +67,7 @@
   <header class="site-header">
     <div class="container header-container">
       <a href="#" class="brand-logo" aria-label="The Beauty Factory Home">
-        <span class="brand-badge-box">TBF</span>
+        <img src="/images/tbf_logo.svg" alt="The Beauty Factory Logo" class="brand-logo-emblem" width="38" height="38">
         <div class="brand-text">
           <span class="brand-name-main">THE BEAUTY FACTORY</span>
           <span class="brand-name-sub">by Dr. Bhanu Kalaivani</span>
@@ -115,9 +116,12 @@
   <div id="mobile-drawer" class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
     <div class="mobile-drawer-content">
       <div class="mobile-drawer-header" style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 16px; border-bottom: 1px solid #EAE6DF;">
-        <div class="brand-text">
-          <span class="brand-name-main">THE BEAUTY FACTORY</span>
-          <span class="brand-name-sub">by Dr. Bhanu Kalaivani</span>
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <img src="/images/tbf_logo.svg" alt="The Beauty Factory Logo" class="brand-logo-emblem" width="34" height="34">
+          <div class="brand-text">
+            <span class="brand-name-main">THE BEAUTY FACTORY</span>
+            <span class="brand-name-sub">by Dr. Bhanu Kalaivani</span>
+          </div>
         </div>
         <button id="mobile-menu-close" class="modal-close-btn" aria-label="Close menu" style="position: static;">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -316,30 +320,50 @@
       </div>
     </section>
 
-    <!-- STRESS FREE WEDDING MAKEUP BANNER (matching Image 3) -->
-    <section class="stress-free-section">
+    <!-- STRESS FREE WEDDING MAKEUP BANNER (matching Reference Image) -->
+    <section class="stress-free-section" id="stress-free-section" aria-label="Stress Free Wedding Makeup">
       <div class="container stress-free-container">
-        <div class="stress-free-typography">
-          <div class="stress-free-headline">
-            <span class="script-stress-free">Stress free</span>
-            <div class="hearts-decorative">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="1.5">
-                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-              </svg>
+        <!-- Interactive link to booking/enquiry -->
+        <a href="#booking-section" class="stress-free-banner-link" title="Book Your Stress-Free Wedding Makeup">
+          <!-- Desktop / Tablet banner: Pixel-perfect authentic composite matching reference -->
+          <div class="stress-free-banner-wrapper">
+            <picture class="stress-free-picture">
+              <source media="(min-width: 680px)" srcset="/images/stress_free_banner_clean.png">
+              <img 
+                src="/images/stress_free_banner_clean.png" 
+                alt="Stress free Wedding Makeup - The Beauty Factory by Dr. Bhanu Kalaivani" 
+                class="stress-free-banner-full"
+                loading="lazy" 
+                width="1024" 
+                height="426"
+              >
+            </picture>
+          </div>
+
+          <!-- Mobile Optimized Interactive View (Shown on screens < 680px for maximum readability) -->
+          <div class="stress-free-mobile-layout">
+            <div class="stress-free-mobile-sticker">
+              <img 
+                src="/images/stress_free_text_sticker.png" 
+                alt="Stress free Wedding Makeup sticker" 
+                class="stress-free-mobile-sticker-img"
+                loading="lazy"
+                width="610"
+                height="426"
+              >
             </div>
-            <div class="bold-wedding-makeup">
-              <span class="divider-arrow">&larr; &#9825; &rarr;</span>
-              <span class="sans-title">WEDDING MAKEUP</span>
+            <div class="stress-free-mobile-bride">
+              <img 
+                src="/images/stress_free_bride_cutout.png" 
+                alt="Celebrating South Indian bride with wedding garlands" 
+                class="stress-free-mobile-bride-img"
+                loading="lazy"
+                width="384"
+                height="426"
+              >
             </div>
           </div>
-          <p class="stress-free-desc">
-            From early morning 5:00 AM sacred rituals to late night receptions, Dr. Bhanu Kalaivani and her master team bring calm, punctual perfection so you simply breathe, smile, and celebrate.
-          </p>
-        </div>
-
-        <div class="stress-free-image-wrap">
-          <img src="/images/hero.jpg" alt="Joyful South Indian Bride" class="stress-free-bride-img" loading="lazy" width="460" height="580">
-        </div>
+        </a>
       </div>
     </section>
 
@@ -1041,7 +1065,7 @@
         <!-- Brand Summary -->
         <div class="footer-brand-summary">
           <div class="brand-logo" style="margin-bottom: 12px;">
-            <span class="brand-badge-box">TBF</span>
+            <img src="/images/tbf_logo.svg" alt="The Beauty Factory Logo" class="brand-logo-emblem" width="40" height="40">
             <div class="brand-text">
               <span class="brand-name-main" style="color: #FFFFFF;">THE BEAUTY FACTORY</span>
               <span class="brand-name-sub" style="color: var(--color-sand-gold);">by Dr. Bhanu Kalaivani</span>
